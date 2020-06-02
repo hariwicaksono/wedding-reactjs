@@ -1,0 +1,43 @@
+{
+  "name": "master",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.19.2",
+    "bootstrap": "^4.4.1",
+    "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0",
+    "react-bootstrap-icons": "^1.0.2-alpha4",
+    "react-bs-notifier": "^5.0.0",
+    "react-codemod": "^5.2.0",
+    "react-dom": "^16.13.1",
+    "react-js-pagination": "^3.0.3",
+    "react-loader": "^2.4.7",
+    "react-notifications": "^1.6.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "^3.4.1",
+    "uikit": "^3.5.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "postinstall": "jscodeshift --silent --babel --transform ./node_modules/babel-plugin-react-rename-unsafe-lifecycle/lib/rename-unsafe-lifecycles.js */react-*/**.js --ignore-pattern */react-native/",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
