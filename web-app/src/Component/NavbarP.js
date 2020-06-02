@@ -48,7 +48,7 @@ handlerSubmit = (event) => {
 
 
   
-<Navbar className="shadow mb-5" bg="primary" variant="dark" expand="lg">
+<Navbar className="shadow mb-5" variant="dark" expand="lg" style={{backgroundColor:"#B68364"}}>
 <Navbar.Brand as={Link} to="/">Wedding CI+ReactJs</Navbar.Brand>
 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 

@@ -123,7 +123,7 @@ class ModelMaster extends CI_Model {
 
 	public function cek_login_admin($user,$password)
 	{
-		return $this->db->get_where('admin',['username_admin' => $user , 'password_admin'=>$password ])->result_array();
+		return $this->db->get_where('users',['username' => $user , 'password'=>$password ])->result_array();
 		//return $this->db->result_array();
 	}
 

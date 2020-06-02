@@ -13,8 +13,9 @@ const SearchResults = (props) => {
 
     <Card.Body>
     <Card.Title><h1>{r.nama}</h1></Card.Title>
+    <hr/>
     <Card.Text>
-     <h5>{r.ucapan}</h5>
+     <h5><em>{r.ucapan}</em></h5>
     </Card.Text>
   
   </Card.Body>

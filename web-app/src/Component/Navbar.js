@@ -48,7 +48,7 @@ handlerSubmit = (event) => {
 
 
   
-<Navbar className="shadow mb-5" bg="primary" variant="dark" expand="lg">
+<Navbar className="shadow mb-5" variant="dark" expand="lg" style={{backgroundColor:"#B68364"}}>
 <Navbar.Brand as={Link} to="/">Wedding CI+ReactJs</Navbar.Brand>
 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
@@ -73,9 +73,9 @@ handlerSubmit = (event) => {
                    <SearchResults data={this.state.results} />
                   
               ): (
-                   <div className="col-sm-6 offset-3">
+                   <div className="col-md-6 offset-md-3">
                 
-                        <img className="img-fluid" src='photo.jpg' alt='' style={{border: '28px solid transparent',WebkitBorderImage: "url('border-image-6.svg') 30 35 stretch"}}/>
+                        <img className="img-fluid" width="550" src='photo.jpg' alt='' style={{border: '28px solid transparent',WebkitBorderImage: "url('border-image-6.svg') 30 35 stretch"}}/>
                    </div>
 
                     

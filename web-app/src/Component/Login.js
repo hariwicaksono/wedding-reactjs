@@ -2,8 +2,16 @@ import React, { Component } from 'react'
 import Navbar from './NavbarP'
 import {Redirect,Link} from 'react-router-dom'
 import API from '../ServiceApi/Index'
-import { NotificationManager } from 'react-notifications';
+import { NotificationManager } from 'react-notifications'
+import {Container, Row, Col, Card, FormGroup} from 'react-bootstrap'
+import Form from 'react-formal'
+import * as yup from 'yup'
 
+const schema = yup.object({
+    username: yup.string().required(),
+    password: yup.string().required(),
+    level: yup.string().required(),
+  }); 
 class Login extends Component {
     constructor(props) {
         super(props)
@@ -25,8 +33,8 @@ class Login extends Component {
         })
     }
 
-    handlerSubmit = (event) => {
-        event.preventDefault()
+    handlerSubmit = () => {
+        //event.preventDefault()
         API.PostLogin(this.state).then(res=>{
             if (res.id === "1" ) {
                 sessionStorage.setItem('isLogin',JSON.stringify(res.data))
@@ -43,9 +51,7 @@ class Login extends Component {
                 })
                 NotificationManager.success('Berhasil masuk kedalam sistem', 'Login!');
             } else {
-               
-                     //console.log("Error in CreateBook!");
-                    NotificationManager.warning('Login gagal, periksa username dan password anda', 'Perhatian!');
+                NotificationManager.warning('Login gagal, periksa username dan password anda', 'Perhatian!');
                   
             }
         })
@@ -65,37 +71,41 @@ class Login extends Component {
             <div>
                 <Navbar />
 
-                <div className="container">
-                    <div className="col-md-4"></div>
-                    <div className="col-md-4">
-                        <h1>HALAMAN LOGIN</h1>
-                        <br />
-                        <div className="panel panel-default">
-                            <div className="panel-body">
-                                <form onSubmit={this.handlerSubmit}>
+                <Container>
+                   <Row>
+                    <Col md={{ span: 6, offset: 3 }}>
+                        
+                        <Card style={{ width: '30rem' }}>
+                            <Card.Body>
+                            <h4 className="mb-3">HALAMAN LOGIN</h4>
+                                <Form onSubmit={this.handlerSubmit} schema={schema}>
+                                    <FormGroup>
+                                        <label>Username</label>
+                                        <Form.Field type="text" name="username" className="form-control" onChange={this.handlerChange} />
+                                        <Form.Message for="username" className="error" />
+                                    </FormGroup>
                                     <div className="form-group">
-                                        <label>MASUKAN EMAIL</label>
-                                        <input type="text" name="username" className="form-control" onChange={this.handlerChange} />
+                                        <label>Password</label>
+                                        <Form.Field type="password" name="password" className="form-control" onChange={this.handlerChange} />
+                                        <Form.Message for="password" className="error" />
                                     </div>
                                     <div className="form-group">
-                                        <label>MASUKAN PASSWORD</label>
-                                        <input type="password" name="password" className="form-control" onChange={this.handlerChange} />
-                                    </div>
-                                    <div className="form-group">
-                                        <select name="level" className="form-control" onChange={this.handlerChange}>
-                                            <option>--PILIH LEVEL--</option>
-                                            <option>USER</option>
+                                        <Form.Field as="select" name="level" className="form-control" onChange={this.handlerChange}>
+                                            <option>Pilih Level</option>
                                             <option>ADMIN</option>
-                                        </select>
+                                            <option>USER</option>
+
+                                        </Form.Field>
+                                        <Form.Message for="level" className="error" />
                                     </div>
-                                    <input type="submit" value="LOGIN" className="btn btn-info" onSubmit={this.handlerSubmit} />
-                                </form>
-                                <hr/>
-                                <Link to={'/register'}>DAFTAR AKUN</Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                                    <Form.Submit type="submit" className="btn btn-primary btn-block">Login</Form.Submit>
+                                </Form>
+                                
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    </Row>
+                </Container>
             </div>
         )
     }
