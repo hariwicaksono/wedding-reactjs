@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Navbar from './NavbarP'
-import {Redirect,Link} from 'react-router-dom'
+import {Redirect} from 'react-router-dom'
 import API from '../ServiceApi/Index'
 import { NotificationManager } from 'react-notifications'
 import {Container, Row, Col, Card, FormGroup} from 'react-bootstrap'
@@ -73,9 +73,9 @@ class Login extends Component {
 
                 <Container>
                    <Row>
-                    <Col md={{ span: 6, offset: 3 }}>
+                    <Col md={{ span: 4, offset: 4 }}>
                         
-                        <Card style={{ width: '30rem' }}>
+                        <Card>
                             <Card.Body>
                             <h4 className="mb-3">HALAMAN LOGIN</h4>
                                 <Form onSubmit={this.handlerSubmit} schema={schema}>

@@ -27,7 +27,7 @@ const SearchResults = (props) => {
 </Card>
     
   ))
-  return <div className="col-md-10 offset-1">{options}</div>
+  return <div className="col-md-10 offset-1"><h1 className="text-center" style={{fontSize:"50px"}}>Selamat Datang Bapak/Ibu</h1><hr/>{options}</div>
 }
 
 export default SearchResults

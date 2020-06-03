@@ -118,11 +118,11 @@ const POSTPESAN = (path,data) =>{
 
 
  
-const GetProduk = () => GET('ProdukController')
+const GetOrang = () => GET('OrangController')
 const GetUser = () => GET('UserController')
 const GetAdmin = () => GET('AdminController')
 const GetAllPesan = () => GET('PemesananController')
-const GetProdukId = (data) => GET_ID('ProdukController?id=',data)
+const GetOrangId = (data) => GET_ID('OrangController?id=',data)
 const PostLogin = (data) => LOGIN('LoginController',data)
 const PostUser = (data) => POSTUSER('UserController',data)
 const PostPesan = (data) => POSTPESAN('PemesananController',data)
@@ -146,10 +146,10 @@ const CariOrang = (data) => GET_ID_VAL('SearchController?id=',data)
 
 
 const API = {
-    GetProduk,
+    GetOrang,
     PostLogin,
     PostUser,
-    GetProdukId,
+    GetOrangId,
     PostPesan,
     GetPesan,
     PostImageP,

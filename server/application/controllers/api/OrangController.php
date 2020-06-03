@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 require APPPATH . 'libraries/REST_Controller.php';
 require APPPATH . 'libraries/Format.php';
-class ProdukController extends REST_Controller{
+class OrangController extends REST_Controller{
 
 	public function __construct($config = 'rest')
     {
@@ -23,9 +23,9 @@ class ProdukController extends REST_Controller{
 	{
 		$id = $this->get('id');
 		if ($id == null) {
-			$mahasiswa = $this->Model->get_produk();
+			$mahasiswa = $this->Model->get_orang();
 		} else {
-			$mahasiswa = $this->Model->get_produk($id);
+			$mahasiswa = $this->Model->get_orang($id);
 		}
 
 		if ($mahasiswa) {

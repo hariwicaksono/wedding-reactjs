@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar'
-import Appbar from './Appbar'
 //import API from '../ServiceApi/Index'
 //import Produk from './Produk'
 //import axios from 'axios'
@@ -79,7 +78,7 @@ class Home extends Component {
                     pageRangeDisplayed = {3}
                     onChange = {this.handlerChange}
                 /> */}
-<Appbar/>
+
             </div>
         )
     }

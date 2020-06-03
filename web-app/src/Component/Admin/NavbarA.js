@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import {Link,Redirect} from 'react-router-dom'
-import { NotificationManager } from 'react-notifications';
+import { NotificationManager } from 'react-notifications'
+import {Navbar, Nav, NavItem, Button, Form, FormControl} from 'react-bootstrap'
 
 class NavbarA extends Component {
     constructor(props){
@@ -36,20 +37,20 @@ class NavbarA extends Component {
         }
         return (
             <div>
-                <div className="navbar navbar-inverse">
-                    <div className="container">
-                        <div className="navbar-haeder">
-                            <Link to="/admin" className="navbar-brand" > HOME</Link>
-                            <ul className="nav navbar-nav navbar-right">
-                                <li><Link to="/produka" >PRODUK</Link></li>
-                                <li> <Link to="/pemesanana" >PEMESANAN</Link></li>
-                                <li> <Link  to="/usera" >USER</Link></li>
-                                <li> <Link to="/hadmin" >ADMIN</Link></li>
-                                <li> <Link to="" onClick={this.logout} >LOGOUT</Link></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <Navbar className="shadow mb-3" variant="dark" expand="lg" style={{backgroundColor:"#B68364"}}>
+                <Navbar.Brand as={Link} to="/">Wedding Disfo (CI+ReactJS)</Navbar.Brand>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="mr-auto">
+                            <Nav.Link as={Link} to="/admin" >HOME</Nav.Link>
+                                <Nav.Link as={Link} to="/oranga" >DATA TAMU</Nav.Link>
+                               <Nav.Link as={Link} to="/pemesanana" >DATA KONFIRMASI</Nav.Link>
+                               <Nav.Link  as={Link} to="/usera" >REKAP KEHADIRAN</Nav.Link>
+                                <Nav.Link as={Link} to="" onClick={this.logout} >LOGOUT</Nav.Link>
+                        </Nav>  
+                    </Navbar.Collapse>
+                    
+                </Navbar>
             </div>
         )
     }

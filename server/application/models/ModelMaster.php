@@ -61,12 +61,12 @@ class ModelMaster extends CI_Model {
 		return $this->db->affected_rows();
 	}
 
-	public function get_produk($id = null)
+	public function get_orang($id = null)
 	{
 		if ($id == null) {
-			return $this->db->get('produk')->result_array();
+			return $this->db->get('orang')->result_array();
 		} else {
-			return $this->db->get_where('produk',['id_produk'=>$id])->result_array();
+			return $this->db->get_where('orang',['id'=>$id])->result_array();
 		}
 	}
 
@@ -123,7 +123,7 @@ class ModelMaster extends CI_Model {
 
 	public function cek_login_admin($user,$password)
 	{
-		return $this->db->get_where('users',['username' => $user , 'password'=>$password ])->result_array();
+		return $this->db->get_where('admin',['username' => $user , 'password'=>$password ])->result_array();
 		//return $this->db->result_array();
 	}
 
