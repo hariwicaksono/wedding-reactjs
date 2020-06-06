@@ -64,7 +64,7 @@ class ModelMaster extends CI_Model {
 	public function get_orang($id = null)
 	{
 		if ($id == null) {
-			return $this->db->get('orang',16)->result_array();
+			return $this->db->get('orang')->result_array();
 		} else {
 			return $this->db->get_where('orang',['id'=>$id])->result_array();
 		}

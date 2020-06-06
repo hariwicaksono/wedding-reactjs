@@ -14,8 +14,6 @@ class OrangA extends Component {
         }
     }
 
-   
-
     hapus = (data) => {
         if (window.confirm('Hapus Akun..??')) {
             API.DeleteProduk(data).then(res => {
@@ -41,17 +39,18 @@ class OrangA extends Component {
     }
 
     render() {
-        return ( 
+        return (  
         <div>
         <NavbarA />
-            <div className="bg-white mx-3">
+            <div className="bg-white mx-3 px-2 py-4">
               
-                <Container className="my-3 px-3 py-4" fluid>
+                <Container fluid>
                     <h2 className="mb-3">DATA TAMU UNDANGAN <Link className="btn btn-info btn-sm float-right" to="/tproduk" >TAMBAH ORANG</Link></h2>
-                    
-                    <DOrangA pageSize={5} pageCount={this.state.orang.length} currentPage={0} data={this.state.orang} remove={this.hapus} />
+        
+                    <DOrangA pageSize={5} pageCount={this.state.orang.length} currentPage={1} data={this.state.orang} remove={this.hapus} />
                     
                 </Container>
+                <br/><br/>
             </div>
         </div> 
         )
