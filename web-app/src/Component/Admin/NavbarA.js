@@ -36,8 +36,8 @@ class NavbarA extends Component {
             return( <Redirect to='/login' /> )
         }
         return (
-            <div>
-                <Navbar className="shadow mb-3" variant="dark" expand="lg" style={{backgroundColor:"#B68364"}}>
+           
+                <Navbar className="shadow mb-3" bg="dark" variant="dark" expand="lg" sticky="top">
                 <Navbar.Brand as={Link} to="/">Wedding Disfo (CI+ReactJS)</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
@@ -51,7 +51,7 @@ class NavbarA extends Component {
                     </Navbar.Collapse>
                     
                 </Navbar>
-            </div>
+           
         )
     }
 }

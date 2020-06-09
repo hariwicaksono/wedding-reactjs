@@ -42,7 +42,7 @@ class ModelMaster extends CI_Model {
 			return $this->db->get_where('user',['id_user'=>$id])->result_array();
 		}
 	}
-
+ 
 	public function post_user($data)
 	{
 		$this->db->insert('user',$data);

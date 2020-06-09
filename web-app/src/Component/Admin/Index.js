@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import NavbarA from './NavbarA'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import API from '../../ServiceApi/Index'
-
+import {Container, CardDeck, Card} from 'react-bootstrap'
 
 class Index extends Component {
     constructor(props){
@@ -15,7 +15,7 @@ class Index extends Component {
             foto :'',
             loading: true
         }
-    }
+    } 
     componentDidMount = () => {
         const data = JSON.parse(sessionStorage.getItem('isAdmin'))
         setTimeout(() => { this.setState({
@@ -45,7 +45,50 @@ class Index extends Component {
                 </div>
                 </div>
                 :
-                <div className="container">
+                <div className="bg-white mx-3 px-2 py-4">
+            <Container>
+                <CardDeck>
+                <Card>
+                    <Card.Img variant="top" src="holder.js/100px160" />
+                    <Card.Body>
+                    <Card.Title>Card title</Card.Title>
+                    <Card.Text>
+                        This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This content is a little bit longer.
+                    </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                    <small className="text-muted">Last updated 3 mins ago</small>
+                    </Card.Footer>
+                </Card>
+                <Card>
+                    <Card.Img variant="top" src="holder.js/100px160" />
+                    <Card.Body>
+                    <Card.Title>Card title</Card.Title>
+                    <Card.Text>
+                        This card has supporting text below as a natural lead-in to additional
+                        content.{' '}
+                    </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                    <small className="text-muted">Last updated 3 mins ago</small>
+                    </Card.Footer>
+                </Card>
+                <Card>
+                    <Card.Img variant="top" src="holder.js/100px160" />
+                    <Card.Body>
+                    <Card.Title>Card title</Card.Title>
+                    <Card.Text>
+                        This is a wider card with supporting text below as a natural lead-in to
+                        additional content. This card has even longer content than the first to
+                        show that equal height action.
+                    </Card.Text>
+                    </Card.Body>
+                    <Card.Footer>
+                    <small className="text-muted">Last updated 3 mins ago</small>
+                    </Card.Footer>
+                </Card>
+                </CardDeck>
                     <div className="col-md-4"></div>
                     <div className="col-md-4">
                         <h1>ADMIN AKUN</h1>
@@ -77,6 +120,7 @@ class Index extends Component {
                             </div>
                         </div>
                     </div>
+                    </Container>
                 </div>
 
             }
