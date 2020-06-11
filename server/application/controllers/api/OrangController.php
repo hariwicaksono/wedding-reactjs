@@ -65,7 +65,7 @@ class OrangController extends REST_Controller{
 		}
 	}
 
-
+ 
 	public function index_delete()
 	{
 		$id = $_GET['id'];
@@ -75,7 +75,7 @@ class OrangController extends REST_Controller{
 				'data' => 'id_not found'
 			],REST_Controller::HTTP_BAD_REQUEST);
 		} else {
-			if($this->Model->delete_produk($id) > 0){
+			if($this->Model->delete_orang($id) > 0){
 					$this->response([
 					'status' => 1,
 					'data' => 'Succes Delete data'

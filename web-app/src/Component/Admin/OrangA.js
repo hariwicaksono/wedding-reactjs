@@ -4,19 +4,22 @@ import { Link } from 'react-router-dom'
 import API from '../../ServiceApi/Index'
 import DOrangA from './DOrangA'
 import {Container} from 'react-bootstrap'
-//import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+//import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table'
+import ContentLoader from '../ContentLoader'
+
 
 class OrangA extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            orang: []
+            orang: [],
+            loading: true
         }
     }
 
     hapus = (data) => {
         if (window.confirm('Hapus Akun..??')) {
-            API.DeleteProduk(data).then(res => {
+            API.DeleteOrang(data).then(res => {
                 if (res === 1) {
                     this.getHandler()
                 } else {
@@ -35,7 +38,14 @@ class OrangA extends Component {
     }
 
     componentDidMount = () => {
-        this.getHandler()
+        
+        setTimeout(() => { 
+            this.getHandler()
+            this.setState({
+                loading: false
+            })
+
+        }, 1000);
     }
 
     render() {
@@ -45,10 +55,15 @@ class OrangA extends Component {
             <div className="bg-white mx-3 px-2 py-4">
               
                 <Container fluid>
-                    <h2 className="mb-3">DATA TAMU UNDANGAN <Link className="btn btn-info btn-sm float-right" to="/tproduk" >TAMBAH ORANG</Link></h2>
+                    <h2 className="mb-3">Data Tamu Undangan <Link className="btn btn-primary float-right" to="/tproduk" >Tambah Orang</Link></h2>
         
-                    <DOrangA pageSize={5} pageCount={this.state.orang.length} currentPage={1} data={this.state.orang} remove={this.hapus} />
-                    
+                    {
+                this.state.loading
+                ? 
+                <ContentLoader />
+                :
+                    <DOrangA pageSize={10} pageCount={this.state.orang.length} currentPage={0} data={this.state.orang} remove={this.hapus} />
+                } 
                 </Container>
                 <br/><br/>
             </div>

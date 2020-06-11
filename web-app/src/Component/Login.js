@@ -77,7 +77,7 @@ class Login extends Component {
                         
                         <Card>
                             <Card.Body>
-                            <h4 className="mb-3">HALAMAN LOGIN</h4>
+                            <h4 className="mb-3">LOGIN</h4>
                                 <Form onSubmit={this.handlerSubmit} schema={schema}>
                                     <FormGroup>
                                         <label>Username</label>

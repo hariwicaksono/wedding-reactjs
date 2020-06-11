@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import NavbarA from './NavbarA'
 import API from '../../ServiceApi/Index'
+import { NotificationManager } from 'react-notifications'
+import {Container, Row, Col, Card} from 'react-bootstrap'
 
 class EAdmin extends Component {
     constructor(props) {
@@ -56,29 +58,37 @@ class EAdmin extends Component {
                 console.log(res)
                 if (res.status === 1) {
                     this.props.history.push('/admin')
-                }
+                } 
             })
+            NotificationManager.success('Berhasil mengubah data profil anda', 'Update');
+            
         } else {
             console.log('ada')
             API.PostImageP(this.state.file.fto, this.state.file.fto.name).then(res => {
                 console.log(res)
-            })
+            }) 
             API.PutAdmin(this.state).then(res => {
                 if (res.status === 1) {
                     this.props.history.push('/admin')
                 }
             })
-        }
-    }
+            NotificationManager.success('Berhasil mengubah data profil anda', 'Update');
 
+        }
+        
+    }
+ 
     render() {
         return (
             <div>
                 <NavbarA />
-                <div className="container">
-                    <div className="col-md-4"></div>
-                    <div className="col-md-4">
-                        <h1>EDIT ADMIN</h1>
+                
+                <Container>
+                    <Row>
+                    <Col md={{ span: 6, offset: 3 }}>
+                    <Card>
+                            <Card.Body>
+                        <h3>Edit Profil</h3>
                         <hr />
                         <div className="panel panel-default">
                             <div className="panel-body">
@@ -102,8 +112,12 @@ class EAdmin extends Component {
                                 </form>
                             </div>
                         </div>
-                    </div>
-                </div>
+                        </Card.Body>
+                        </Card>
+                    </Col>
+                    </Row>
+                </Container>
+               
             </div>
         )
     }

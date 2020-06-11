@@ -134,7 +134,7 @@ const PutProduk = (data) => PUTPRODUK('ProdukController',data);
 const PutPesan = (data) => PUTPRODUK('PemesananController',data);
 const PutAdmin = (data) => PUTPRODUK('AdminController',data);
 const PutUser = (data) => PUTPRODUK('UserController',data);
-const DeleteProduk = (id) => Delete('ProdukController/index_delete?id=',id)
+const DeleteOrang = (id) => Delete('OrangController/index_delete?id=',id)
 const DeletePemesanan = (id) => Delete('PemesananController/index_delete?id=',id)
 const DeleteUser = (id) => Delete('UserController/index_delete?id=',id)
 const DeleteAdmin = (id) => Delete('AdminController/index_delete?id=',id)
@@ -156,7 +156,7 @@ const API = {
     PostProduk,
     PutProduk,
     GetAllPesan,
-    DeleteProduk,
+    DeleteOrang,
     DeleteAdmin,
     DeletePemesanan,
     GetPesanId,

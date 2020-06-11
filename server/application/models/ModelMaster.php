@@ -76,9 +76,9 @@ class ModelMaster extends CI_Model {
 		return $this->db->affected_rows();
 	}
 
-	public function delete_produk($id = null)
+	public function delete_orang($id = null)
 	{
-		$this->db->delete('produk',['id_produk' => $id]);
+		$this->db->delete('orang',['id' => $id]);
 		return $this->db->affected_rows();
 	}
 
@@ -123,7 +123,7 @@ class ModelMaster extends CI_Model {
 
 	public function cek_login_admin($user,$password)
 	{
-		return $this->db->get_where('admin',['username' => $user , 'password'=>$password ])->result_array();
+		return $this->db->get_where('admin',['username_admin' => $user , 'password_admin'=>$password ])->result_array();
 		//return $this->db->result_array();
 	}
 
