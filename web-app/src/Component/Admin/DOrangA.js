@@ -8,6 +8,7 @@ class DOrangA extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            offset: 0,
           currentPage: props.currentPage
         };
         this.handlePageClick = this
@@ -26,11 +27,13 @@ class DOrangA extends Component {
         });
 
     };
+    
     render() {
         const { pageSize, pageCount, data } = this.props;
-        const { currentPage } = this.state;
+        const { currentPage } = this.state.currentPage;
+        const {offset} = this.state.offset;
     
-        const paginatedData = data.slice(currentPage, currentPage + pageSize);
+        const paginatedData = data.slice(offset, offset + pageSize);
 
         const lisOrang = paginatedData.map(data => (
             <tbody key={data.id} >
@@ -46,6 +49,7 @@ class DOrangA extends Component {
                     </td>
                 </tr>
             </tbody>
+            
         ))
        
         return (
