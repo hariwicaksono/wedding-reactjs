@@ -12,7 +12,7 @@ import DetailU from './Component/User/DetailU';
 import AboutU from './Component/User/AboutU';
 import Cart from './Component/User/Cart';
 import Pemesanan from './Component/User/Pemesanan';
-import OrangA from './Component/Admin/OrangA';
+import DataOrangA from './Component/Admin/DataOrangA';
 import TProdukA from './Component/Admin/TProdukA';
 import EditProduk from './Component/Admin/EditProduk';
 import DetailProdukA from './Component/Admin/DetailProdukA';
@@ -41,7 +41,7 @@ function App() {
         <Route path="/detailu/:id" component={DetailU} />
         <Route path="/cart" component={Cart} />
         <Route path="/pesanu" component={Pemesanan} />
-        <Route path="/oranga" component={OrangA} />
+        <Route path="/dataorang" component={DataOrangA} />
         <Route path="/tproduk" component={TProdukA} />
         <Route path="/editpa/:id" component={EditProduk} />
         <Route path="/detailpa/:id" component={DetailProdukA} />
