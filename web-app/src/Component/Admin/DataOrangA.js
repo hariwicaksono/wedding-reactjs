@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import NavbarA from './NavbarA'
 import { Link } from 'react-router-dom'
 import API from '../../ServiceApi/Index'
-import DOrangA from './DOrangA'
 import {Container, Table} from 'react-bootstrap'
 import {Pencil, Trash, Eye} from 'react-bootstrap-icons'
 import ReactPaginate from 'react-paginate'
@@ -46,7 +45,7 @@ class DataOrangA extends Component {
                 <tr>
                     <td> {data.id}</td>
                     <td> {data.nama} </td>
-                    <td> {data.link} </td>
+                <td> <a href={data.link} alt={'link'+data.nama} target="_blank">{data.link}</a></td>
                     <td> {data.qr_code} </td>
                     <td>
                         <Link to={'/detailpa/' + data.id} className="btn btn-info btn-sm"><Eye size={18} /></Link>&nbsp;
