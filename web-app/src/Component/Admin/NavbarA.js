@@ -65,7 +65,7 @@ class NavbarA extends Component {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                 <Nav.Link as={Link} to="/admin" >Home</Nav.Link>
-                <Nav.Link as={Link} to="/dataorang" >Data Tamu</Nav.Link>
+                <Nav.Link as={Link} to="/datatamu" >Data Tamu</Nav.Link>
                 <Nav.Link as={Link} to="/pemesanana" >Data Konfirmasi</Nav.Link>
                 <Nav.Link  as={Link} to="/usera" >Rekap Kehadiran</Nav.Link>
         <NavDropdown title={this.state.nama} id="basic-nav-dropdown">

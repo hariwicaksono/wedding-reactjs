@@ -12,10 +12,10 @@ import DetailU from './Component/User/DetailU';
 import AboutU from './Component/User/AboutU';
 import Cart from './Component/User/Cart';
 import Pemesanan from './Component/User/Pemesanan';
-import DataOrangA from './Component/Admin/DataOrangA';
+import DataTamuA from './Component/Admin/DataTamuA';
 import TProdukA from './Component/Admin/TProdukA';
 import EditProduk from './Component/Admin/EditProduk';
-import DetailProdukA from './Component/Admin/DetailProdukA';
+import DetailTamuA from './Component/Admin/DetailTamuA';
 import PemesananA from './Component/Admin/PemesananA';
 import EditPemesanan from './Component/Admin/EditPemesanan';
 import UserA from './Component/Admin/UserA';
@@ -41,10 +41,10 @@ function App() {
         <Route path="/detailu/:id" component={DetailU} />
         <Route path="/cart" component={Cart} />
         <Route path="/pesanu" component={Pemesanan} />
-        <Route path="/dataorang" component={DataOrangA} />
+        <Route path="/datatamu" component={DataTamuA} />
         <Route path="/tproduk" component={TProdukA} />
         <Route path="/editpa/:id" component={EditProduk} />
-        <Route path="/detailpa/:id" component={DetailProdukA} />
+        <Route path="/detailtamu/:id" component={DetailTamuA} />
         <Route path="/pemesanana" component={PemesananA} />
         <Route path="/editpesan/:id" component={EditPemesanan} />
         <Route path="/usera" component={UserA} />
