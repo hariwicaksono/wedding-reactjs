@@ -58,8 +58,8 @@ handlerSubmit = (event) => {
 
 
   
-<Navbar className="shadow mb-3" variant="dark" expand="lg" style={{backgroundColor:"#B68364"}}>
-<Navbar.Brand href="/" alt=""><ThreeDotsVertical /></Navbar.Brand>
+<Navbar className="shadow mb-3" variant="dark" expand="lg" style={{backgroundColor:"#B68364",height:"65px"}}>
+<Navbar.Brand href="/" alt=""><ThreeDotsVertical size="34"/></Navbar.Brand>
 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
 <Navbar.Collapse id="basic-navbar-nav">
