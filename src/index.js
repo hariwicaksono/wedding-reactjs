@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'argon-design-system-react/src/assets/css/argon-design-system-react.css';
 import 'react-notifications/lib/notifications.css';
 //import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 import './index.css';

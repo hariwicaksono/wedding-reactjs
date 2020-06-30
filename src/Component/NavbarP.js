@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import {Link,Redirect,NavLink} from 'react-router-dom'
 import {Navbar, Nav, NavItem} from 'react-bootstrap'
-
+import {ThreeDotsVertical, BoxArrowInRight} from 'react-bootstrap-icons'
 
 class Navigationbar extends Component{
   constructor(props) {
@@ -28,14 +28,14 @@ class Navigationbar extends Component{
 
   
 <Navbar className="shadow mb-5" variant="dark" expand="lg" style={{backgroundColor:"#B68364"}}>
-<Navbar.Brand as={Link} to="/">Wedding Disfo (CI+ReactJS)</Navbar.Brand>
+<Navbar.Brand href="/" alt=""><ThreeDotsVertical /></Navbar.Brand>
 <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
 <Navbar.Collapse id="basic-navbar-nav">
 <Nav className="ml-auto">
 
 <NavItem className="navItem">
-  <NavLink className="btn btn-dark" to="/login">Login</NavLink>
+  <NavLink className="btn btn-dark" to="/login"><BoxArrowInRight/> Login</NavLink>
 </NavItem>
 
   </Nav>

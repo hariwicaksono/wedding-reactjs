@@ -142,7 +142,7 @@ const GetPesanId = (data) => GET_ID('ImageUpload?id=',data)
 const GetUserId = (data) => GET_ID('UserController?id=',data)
 const GetAdminId = (data) => GET_ID('AdminController?id=',data)
 const CariOrang = (data) => GET_ID_VAL('SearchController?id=',data)
-
+const GetPengaturan = () => GET('PengaturanController')
 
 
 const API = {
@@ -169,7 +169,8 @@ const API = {
     GetAdminId,
     PutAdmin,
     PutUser,
-    CariOrang
+    CariOrang,
+    GetPengaturan
 }
 
 export default API
