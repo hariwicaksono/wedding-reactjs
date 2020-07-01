@@ -1,12 +1,11 @@
 import React,{Component} from 'react'
-import {NavLink} from 'react-router-dom'
+//import {NavLink} from 'react-router-dom'
 import API from '../ServiceApi/Index'
 import Loader from 'react-loader'
 import SearchResults from './SearchResults'
 import Pengaturan from './Pengaturan'
 import {Navbar, Nav, NavItem, Button, Form, FormControl} from 'react-bootstrap'
 import {ThreeDotsVertical, BoxArrowInRight, Search} from 'react-bootstrap-icons'
-//import { NotificationManager } from 'react-notifications'
  
 var options = {
   lines: 13,
@@ -76,7 +75,7 @@ handlerSubmit = (event) => {
        <div>
 
         <Navbar className="shadow mb-3" variant="dark" expand="lg" style={{backgroundColor:"#B68364",height:"60px"}}>
-        <Navbar.Brand href="/" alt=""><ThreeDotsVertical size="34"/></Navbar.Brand>
+        <Navbar.Brand href="./" alt=""><ThreeDotsVertical size="34"/></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
         <Navbar.Collapse id="basic-navbar-nav">
@@ -96,7 +95,7 @@ handlerSubmit = (event) => {
           <Nav className="ml-auto">
 
         <NavItem className="navItem">
-          <NavLink className="btn btn-primary" to="/login"><BoxArrowInRight size="18"/> Login</NavLink>
+          <a className="btn btn-primary" href="http://localhost/wedding-server/login"><BoxArrowInRight size="18"/> Login</a>
         </NavItem>
 
         </Nav>
