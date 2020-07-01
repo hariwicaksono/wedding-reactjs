@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'argon-design-system-react/src/assets/css/argon-design-system-react.css';
-import 'react-notifications/lib/notifications.css';
-//import 'react-bootstrap-table/dist/react-bootstrap-table-all.min.css';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
