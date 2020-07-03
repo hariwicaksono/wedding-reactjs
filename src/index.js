@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'argon-design-system-react/src/assets/css/argon-design-system-react.css';
 import './index.css';
+import 'react-notifications/lib/notifications.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

@@ -6,6 +6,7 @@ import SearchResults from './SearchResults'
 import Pengaturan from './Pengaturan'
 import {Navbar, Nav, NavItem, Button, Form, FormControl} from 'react-bootstrap'
 import {ThreeDotsVertical, BoxArrowInRight, Search} from 'react-bootstrap-icons'
+import { NotificationManager } from 'react-notifications'
  
 var options = {
   lines: 13,
@@ -64,8 +65,9 @@ handlerSubmit = (event) => {
         results: res,
         loading: false
       }), 100);
-    
+      NotificationManager.success('Berhasil masuk sistem');
   })
+  
 }
 
   render(){
