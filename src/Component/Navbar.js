@@ -61,18 +61,29 @@ handlerSubmit = (event) => {
   //console.log(event)
   const query=this.state.query
   API.CariOrang(query).then(res=>{
-    setTimeout(() =>this.setState({
+    //console.log(res)
+    setTimeout(() => {
+    if (res.length > 0) {
+      this.setState({
         results: res,
         loading: false
-      }), 100);
-      NotificationManager.success('Berhasil masuk sistem');
+      })
+      NotificationManager.success('Berhasil, selamat datang tamu undangan');
+    } else {
+      this.setState({
+        results: res,
+        loading: false
+      })
+      NotificationManager.warning('Perhatian, nomor tamu undangan tidak ada');
+    }
+   }, 100);
+      
   })
   
 }
 
   render(){
     
-        
         return(
        <div>
 
@@ -112,7 +123,8 @@ handlerSubmit = (event) => {
             ?
             <Loader options={options} className="spinner" />
             :
-              <SearchResults data={this.state.results} />
+            
+             <SearchResults data={this.state.results} />
             )
             
         ): (
