@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/hariwicaksono/wedding-reactjs/master/wedding-react1.png" width="350" alt="Wedding ReactJS">
+  <img src="https://raw.githubusercontent.com/hariwicaksono/wedding-reactjs/master/wedding-react1.png" width="650" alt="Wedding ReactJS">
 </p>
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
