@@ -24,12 +24,25 @@ const GET_ID_VAL = (path,data) => {
     return promise
 }
 
+const POST = (path,data) =>{
+    const promise = new Promise((resolve,reject)=>{
+         Axios.post(RoothPath+path,data).then(res=>{
+             resolve(res.data)
+         },err=>{
+             reject(err)
+         })
+    })
+    return promise
+ }
+
 const CariOrang = (data) => GET_ID_VAL('SearchController?id=',data)
 const GetPengaturan = () => GET('PengaturanController')
+const PostHadir = (data) => POST('HadirController',data)
 
 const API = {
     CariOrang,
-    GetPengaturan
+    GetPengaturan,
+    PostHadir
 }
 
 export default API

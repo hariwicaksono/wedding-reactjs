@@ -55,7 +55,7 @@ class Navigationbar extends Component{
          }), 100);
       })
  }
-     
+      
 handlerSubmit = (event) => {
   event.preventDefault()
   //console.log(event)
@@ -68,6 +68,9 @@ handlerSubmit = (event) => {
         results: res,
         loading: false
       })
+      API.PostHadir(this.state).then(res => {
+        console.log(res)
+      });
       NotificationManager.success('Berhasil, selamat datang tamu undangan');
     } else {
       this.setState({
@@ -79,13 +82,14 @@ handlerSubmit = (event) => {
    }, 100);
       
   })
+ 
   
 }
 
   render(){
     
         return(
-       <div>
+       <>
 
         <Navbar className="shadow mb-3" variant="dark" expand="lg" style={{backgroundColor:"#B68364",height:"60px"}}>
         <Navbar.Brand href="./" alt=""><ThreeDotsVertical size="34"/></Navbar.Brand>
@@ -139,7 +143,7 @@ handlerSubmit = (event) => {
           )
               
         )}
-        </div>
+        </>
         )
     }
 }

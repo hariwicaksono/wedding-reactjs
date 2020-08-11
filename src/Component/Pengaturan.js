@@ -25,11 +25,11 @@ class Pengaturan extends Component {
         </div>
         ))
         return (
-            <div>
+            <>
                 <Container>
                     {ListPengaturan}
                 </Container>   
-            </div>
+            </>
         )
     }
 }
