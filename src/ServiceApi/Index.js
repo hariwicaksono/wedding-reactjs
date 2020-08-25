@@ -35,6 +35,50 @@ const POST = (path,data) =>{
     return promise
  }
 
+const LOGIN = (path,data) => {
+    const promise = new Promise((resolve,reject)=>{
+        Axios.post(RoothPath+path,data).then(res=>{
+            resolve(res.data)
+        },err=>{
+            reject(err)
+        })
+    })
+    return promise
+}
+
+const PUTUSER = (path,data) =>{
+    const promise = new Promise((resolve,reject)=>{
+         Axios.put(RoothPath+path,data).then(res=>{
+             resolve(res.data)
+         },err=>{
+             reject(err)
+         })
+    })
+    return promise
+ }
+
+const POSTUSER = (path,data) =>{
+    const promise = new Promise((resolve,reject)=>{
+         Axios.post(RoothPath+path,data).then(res=>{
+             resolve(res.data)
+         },err=>{
+             reject(err)
+         })
+    })
+    return promise
+ }
+
+const Delete = (path,id) => {
+    const promise = new Promise((resolve,reject) => {
+        Axios.delete(RoothPath+path+id).then(res =>{
+            resolve(res.data.status)
+        },(err)=>{
+            reject(err)
+        })
+    })
+    return promise
+}
+
 const CariOrang = (data) => GET_ID_VAL('SearchController?id=',data)
 const GetPengaturan = () => GET('PengaturanController')
 const PostHadir = (data) => POST('HadirController',data)
