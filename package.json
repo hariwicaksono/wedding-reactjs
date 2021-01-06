@@ -4,9 +4,9 @@
   "private": true,
   "dependencies": {
     "argon-design-system-react": "^1.1.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.5.0",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "react-bootstrap": "^1.0.1",
     "react-bootstrap-icons": "^1.0.3-alpha5",
     "react-codemod": "^5.2.0",
